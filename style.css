@@ -285,10 +285,9 @@ ul li a:hover {
     color: #ffffff;
     position: absolute;
     padding: 0;
-    border: 8px solid rgb(238, 36, 36);
     flex: 1;
     text-align: left;
-    padding: 5%;
+    margin: 10%;
     text-align: justify;
     
 
@@ -299,8 +298,7 @@ ul li a:hover {
  .text-box h1{
     font-size: 100px;
     font-weight: 600;
-    margin-top: 100px;
-    margin-left: 20px;  
+    margin-left: 10px;  
     color: transparent;
     -webkit-text-stroke:1px rgb(255, 255, 255);
     background: url(assets/back.png);
@@ -308,9 +306,23 @@ ul li a:hover {
     background-position: 0 0;
     animation: back 20s linear infinite;
     border: none;
+
   
 
   
+}
+.text-box1 h1{
+  font-size: 100px;
+  font-weight: 600;
+  margin-left: 20spx;  
+  color: transparent;
+  -webkit-text-stroke:1px rgb(255, 255, 255);
+  background: url(assets/back.png);
+  -webkit-background-clip:text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  border: none;
+  margin-top: -100px;
 }
 @keyframes back{
     100%{
@@ -347,7 +359,10 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: -100px ;
  }
+ 
+
 
 .content2_data{
   flex: 1;
@@ -387,3 +402,31 @@ ul li a:hover {
   font-weight: 600;
   font-size: 20px;
 }
+
+.education-item {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.year {
+  width: 100px; /* Adjust the width as needed */
+  font-weight: bold;
+}
+
+.details {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.institute-box {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Adjust the distance from the text */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1;
+}
+
+
