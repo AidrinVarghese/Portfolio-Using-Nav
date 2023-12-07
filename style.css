@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+ 
+:root {
+  --primary-color: rgb(255, 0, 0);
+  --primary-color-dark: rgb(243, 89, 0);
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+.active {
+    color : rgb(255, 0, 0)6, 148, 21;
+}
+ 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+ 
+a {
+  text-decoration: none;
+}
+ 
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+ 
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+ 
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+ 
+nav .checkbox {
+  display: none;
+}
+ 
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+ 
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+ 
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+ 
+ul li a:hover {
+  border-top-color:red;
+  border-bottom-color: red;
+  color: red;
+}
+ 
+.section {
+  background-color: var(--extra-light);
+}
+ 
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+ 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+ 
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+ 
+.title span {
+  font-weight: 600;
+  text-align: right;
+  animation: left_to_right 3s ease;
+}
+@keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+
+ 
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+ 
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+ 
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.8s;
+  cursor: pointer;
+  
+  
+}
+
+ 
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+ 
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+  cursor: pointer;
+
+  
+}
+ 
+.portfolio {
+  color: var(--primary-color);
+}
+ 
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+ 
+.image {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+ 
+.image img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-40%);
+  transition: bottom 1s,left 1s;
+}
+
+.image:hover .shape{
+    bottom: 80px;
+}
+
+.image:hover .boy{
+    left: 200px;
+}
+ 
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+ 
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+ 
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+ 
+  ul li a {
+    font-size: 1.25rem;
+  }
+ 
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+ 
+  .image {
+    grid-area: 1/1/2/2;
+  }
+ 
+  .action__btns {
+    margin: auto;
+  }
+}
+
+.text-box{
+    color: #ffffff;
+    position: absolute;
+    padding: 0;
+    border: 8px solid rgb(238, 36, 36);
+    flex: 1;
+    text-align: left;
+    padding: 5%;
+    text-align: justify;
+    
+
+
+    
+   
+  }
+ .text-box h1{
+    font-size: 100px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-left: 20px;  
+    color: transparent;
+    -webkit-text-stroke:1px rgb(255, 255, 255);
+    background: url(assets/back.png);
+    -webkit-background-clip:text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    border: none;
+  
+
+  
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+    
+}
+
+
+ .section__container2{
+   height: 100vh;
+  max-width: var(--max-width);
+  margin-top: 50px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+
+ }
+ .section2 {
+    background-color: rgb(255, 60, 0);
+  
+   
+    
+  }
+ .section__container2{
+  
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+ .content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+.content2_data{
+  flex: 1;
+  align-items:end;
+}
+
+.page3{
+  height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  display: flex;
+
+}
+
+.page3left{
+  flex: 1;
+  
+}
+
+.page3right{
+  flex: 1;
+
+}
+
+.education{
+  font-size: 20px;
+}
+.description{
+  font-weight: 400;
+}
+.span1{
+  color: red;
+  font-weight: 600;
+  font-size: 20px;
+}
